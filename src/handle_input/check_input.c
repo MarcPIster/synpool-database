@@ -9,11 +9,9 @@
 
 void check_input(int ac, char **av)
 {
-    if (ac != 2) {
+    if (ac != 3) {
         write(2, "False input\n", 12);
         exit(84);
     }
-
-
 }
 

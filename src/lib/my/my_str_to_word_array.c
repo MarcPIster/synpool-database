@@ -20,6 +20,9 @@ int count_words(char *str, char sep)
     int word_count = 0;
     int in_word = 0;
 
+    if (!str)
+        return 0;
+
     for (int i = 0; str[i] != '\0'; i++) {
         if (!in_word && str[i] != sep) {
             in_word = 1;
@@ -46,6 +49,8 @@ char **my_str_to_word_array(char *str, char sep)
     int j = -1;
     int k = 0;
 
+    if (!output || !str)
+        return NULL;
     for (int i = 0; str[i] != '\0'; i++) {
         if (!in_word && str[i] != sep) {
             in_word = 1;

@@ -16,7 +16,7 @@ int find_word(char *word, char *string)
 
     if (len_word > len_string)
         return 0;
-    for (int x = 0; string[x] != '\0'; x++) {
+    for (int x = 0; string[x] != '\0' && string[x] != '\n'; x++) {
         if (string[x] == word[0]) {
             for (int y = 0; y < len_word; y++)
                 if (word[y] == string[y + x])

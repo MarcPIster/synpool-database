@@ -23,5 +23,6 @@ int find_word(char *word, char *string);
 char *read_file(char *filepath);
 char **my_str_to_word_array(char *str, char sep);
 int my_strcmp(char const *s1, char const *s2);
+int array_size(char **table);
 
 #endif //LIB_LIBRARY_H

@@ -10,7 +10,8 @@ CFLAGS = -g3 -W -Wall -Wextra -I./include
 SRC =	src/main.c \
 		src/csv_handler/csv_parser.c \
       	src/handle_input/check_input.c \
-      	src/commands/command_parser.c
+      	src/commands/command_parser.c \
+      	src/free/free_structs.c
 
 OBJ = $(SRC:.c=.o)
 
