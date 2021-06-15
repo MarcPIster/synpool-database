@@ -40,5 +40,11 @@ csv *parse_csv(char *filepath);
 void free_structs(mydb *db);
 void free_csv(csv *mycsv);
 mydb *init_db(char **av);
+void loop(mydb *db, char **av);
+int check_command(char *command);
+void free_tmp(char **tmp);
+int check_sort_command(char *command, int sort, char **tmp);
+int check_show_command(char *command, int show, char **tmp);
+int check_get_command(char *command, int get, char **tmp);
 
 #endif //BSQ_LIBRARY_H

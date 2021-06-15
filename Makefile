@@ -11,8 +11,12 @@ SRC =	src/main.c \
 		src/csv_handler/csv_parser.c \
       	src/handle_input/check_input.c \
       	src/commands/command_parser.c \
+      	src/commands/loop.c \
       	src/free/free_structs.c \
-      	src/csv_handler/init_database.c
+      	src/csv_handler/init_database.c \
+      	src/commands/check_get.c \
+      	src/commands/check_show.c \
+      	src/commands/check_sort.c
 
 OBJ = $(SRC:.c=.o)
 

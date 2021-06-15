@@ -16,7 +16,9 @@ SRC = my_putchar.c \
 	my_strlen.c \
 	my_swap.c \
 	my_str_to_word_array.c \
-	array_size.c
+	array_size.c \
+	my_strcmp.c \
+	is_num.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -36,3 +36,15 @@ void free_csv(csv *mycsv)
     }
     free(mycsv->labels);
 }
+
+void free_tmp(char **tmp)
+{
+    int size = array_size(tmp);
+
+    for (int x = 0; x < size; x++) {
+        free(tmp[x]);
+        tmp[x] = NULL;
+    }
+    free(tmp);
+    tmp = NULL;
+}

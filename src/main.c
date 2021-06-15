@@ -16,6 +16,7 @@ int main(int ac, char **av)
     check_input(ac, av);
     database = init_db(av);
 
+    loop(database, av);
     test = find_word("test\0", "dies test ist testein test\n");
     for (int x = 0; x < database->max; x++)
         printf("%s\n",database->films[x]->title);
