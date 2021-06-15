@@ -9,5 +9,5 @@
 
 int check_command(char *keyword, char *command)
 {
-
+    ;
 }

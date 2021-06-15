@@ -11,7 +11,8 @@ SRC =	src/main.c \
 		src/csv_handler/csv_parser.c \
       	src/handle_input/check_input.c \
       	src/commands/command_parser.c \
-      	src/free/free_structs.c
+      	src/free/free_structs.c \
+      	src/csv_handler/init_database.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -10,15 +10,29 @@
 
 void free_structs(mydb *db)
 {
-    free(db->command);
-    db->command = NULL;
-    for (int x = 0; x < db->max; x++) {
+    for (int x = 0; db->films[x]; x++) {
         //free(db->films[x]->director);
         //free(db->films[x]->synposis);
         //free(db->films[x]->title);
         //free(db->films[x]->type);
         //free(db->films[x]);
     }
-    free(db);
-    db = NULL;
+    //free(db);
+}
+
+void free_csv(csv *mycsv)
+{
+    int len = 0;
+    for (int x = 0; x < mycsv->n_rows; x++) {
+        len = array_size(mycsv->data[x]);
+        for (int y = 0; y < len; y++)
+            free(mycsv->data[x][y]);
+        free(mycsv->data[x]);
+    }
+    free(mycsv->data);
+    len = array_size(mycsv->labels);
+    for (int x = 0; x < len; x++) {
+        free(mycsv->labels[x]);
+    }
+    free(mycsv->labels);
 }

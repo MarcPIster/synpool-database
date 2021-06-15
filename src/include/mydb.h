@@ -21,17 +21,16 @@ typedef struct csv {
 
 typedef struct film {
     int id_movie;
-    char *title;
-    char *synposis;
+    char title[32];
+    char synposis[128];
     int id_director;
-    char *director;
+    char director[16];
     int id_type;
-    char *type;
+    char type[16];
 } film;
 
 typedef struct mydb {
     int max;
-    char *command;
     film **films;
 } mydb;
 
@@ -39,5 +38,7 @@ char *read_file(char *filepath);
 void check_input(int ac, char **av);
 csv *parse_csv(char *filepath);
 void free_structs(mydb *db);
+void free_csv(csv *mycsv);
+mydb *init_db(char **av);
 
 #endif //BSQ_LIBRARY_H
